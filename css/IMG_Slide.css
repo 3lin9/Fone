@@ -1,0 +1,62 @@
+#container{
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 500px;
+	height: 500px;
+}
+.img_slide{
+	width: 2500px;
+	position: absolute;
+}
+.img_slide img{
+	float: left;
+	width: 500px;
+	margin: 54px auto;
+	
+}
+.btn_class .btn_pre{
+	position: absolute;
+	transform: rotate(45deg);
+    top: 200px;
+    left: 20px;
+	width: 40px;
+	height: 40px;
+	border-left: 10px solid #ffffff;
+    border-bottom: 10px solid #ffffff;
+}
+.btn_class .btn_next{
+	position: absolute;
+	/*transform: rotate(45deg);*/
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-moz-transform:rotate(45deg); /* Firefox */
+	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+	-o-transform:rotate(45deg); /* Opera */
+    top: 200px;
+    right: 20px;
+	width: 40px;
+	height: 40px;
+	border-right: 10px solid #ffffff;
+    border-bottom: 10px solid #ffffff;
+}
+.Cbtn_tab {
+    margin: 0 auto;
+    bottom: 80px;
+    position: absolute;
+    margin-left: 200px;
+}
+.Cbtn_tab div{
+	margin: 2px 2px;
+	border: 1px solid #FFEB3B;
+	width: 10px;
+    height: 10px;
+    float: left;
+    background: #E2B0BC;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.Cbtn_tab .on{
+	background: brown;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>frist one</title>
+		<link rel="stylesheet" href="css/IMG_Slide.css" />
+	</head>
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var index =0;
+			var animated =false;
+			var timer;
+			//自动播放
+			$("#container").mouseover(function(){
+				stop();
+			});
+			$("#container").mouseout(function(){
+				paly();
+			})
+			paly();
+			function paly(){
+				timer = setInterval(function(){
+					$(".btn_next").click();
+				},3000)
+			}
+			function stop(){
+				clearInterval(timer);
+			}
+			
+			//上下图片按钮切换
+			function animation(parnum){
+				var Img_pyl=$(".img_slide").css("left");
+				var newleftw = parseInt(Img_pyl) +parnum;
+				if (newleftw<-2000) {
+					$("#Img_Slide").css("left","0px");
+//					$("#Img_Slide").animate({left:"0px"},"slow");
+				} else if(newleftw>0){
+					$("#Img_Slide").css("left","-2000px");
+//					$("#Img_Slide").animate({left:"-2000px"},"slow");
+				}else{
+//					$("#Img_Slide").css("left",newleftw+"px");
+					$("#Img_Slide").animate({left:newleftw+"px"},"slow");
+				}
+			}
+			//小按钮切换
+			function smarlBtn(){
+				if(index>4){
+					index=0;
+				}
+				else if(index<0){
+					index=4;
+				}
+				$(".Cbtn_tab div:eq("+index+")").attr("class","on");
+				$(".Cbtn_tab div:not(:eq("+index+"))").removeClass();
+			}
+			
+			$(".btn_pre").click(function(){
+				if(!animated){
+					animation(500);
+				}
+				index-=1;
+				smarlBtn();
+			});
+			$(".btn_next").click(function(){
+				if(!animated){
+					animation(-500);
+				}
+				index+=1;
+				smarlBtn();
+			});
+			var btnnum = $(".Cbtn_tab").children();
+			$(".Cbtn_tab div").each(function(){
+				$(this).click(function(){
+					var myIndex = parseInt($(this).attr("index"));
+					var nowImgoffset =myIndex * -500;
+					$("#Img_Slide").css("left",nowImgoffset+"px");
+					index=myIndex
+					smarlBtn();
+				});
+			});
+		});
+	</script>
+	<body>
+		<div id="container">
+			<div id="Img_Slide" class="img_slide" style="left: 0px;">
+				<img src="img/one.jpg"/>
+				<img src="img/two.jpg"/>
+				<img src="img/three.jpg"/>
+				<img src="img/four.jpg"/>
+				<img src="img/five.jpg"/>
+			</div>
+			<div id="Img_Btn" class="btn_class">
+				<div class="btn_pre"></div>
+				<div class="btn_next"></div>
+			</div>
+			
+			<div class="Cbtn_tab">
+				<div index="0" class="on"></div>
+				<div index="1"></div>
+				<div index="2"></div>
+				<div index="3"></div>
+				<div index="4"></div>	
+			</div>
+		</div>
+	</body>
+</html>
