@@ -12,3 +12,10 @@ body{margin: 0 auto;}
 	background: -webkit-linear-gradient(top, #69cbf0, #097ba6);   /*Safari5.1 Chrome 10+*/
 	background: -o-linear-gradient(top, #69cbf0, #097ba6);  /*Opera 11.10+*/
 }
+.grayscale{
+	-webkit-filter: grayscale(100%);    /* webkit内核支持程度较好 */  
+    -moz-filter: grayscale(100%);    /* 其他内核现在并不支持，为了将来兼容性书写 */  
+     -ms-filter: grayscale(100%);  
+      -o-filter: grayscale(100%);  
+         filter: grayscale(100%);    /* 标准写法 */  
+}
