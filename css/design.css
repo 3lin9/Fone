@@ -19,3 +19,45 @@ body{margin: 0 auto;}
       -o-filter: grayscale(100%);  
          filter: grayscale(100%);    /* 标准写法 */  
 }
+p{
+	width: 100%;
+	text-align: center;
+	margin: 20px auto;
+	color: #69CBF0;
+	font-weight: bold;
+	text-shadow: 50px 50px 10px #097BA6;
+}
+.img_look{
+	width: 90%;
+	margin: 0 auto;
+}
+.img_look img {
+    height: 400px;
+}
+.img_look ul li{	
+	list-style: none;
+	width:160px;  
+	height: 400px;  
+	float:left;  
+	position:relative;  
+	overflow:hidden;  
+	border-left:2px solid rgba(255,255,255,.8);  ;
+}
+.img_look ul:hover li{  
+  width:40px;  
+  -webkit-filter:grayscale(.8);  
+  filter:grayscale(.8);
+} 
+.img_look ul li:hover{  
+  width:400px;  
+  /*-webkit-filter:grayscale(0) hue-rotate(200deg);  
+  filter:grayscale(0) hue-rotate(200deg);*/
+ -webkit-filter:grayscale(0);  
+  filter:grayscale(0);
+}
+.img_look li{  
+   
+ /* 之前的代码省略 */  
+ /* 新增transition属性 */  
+  transition:all 2s;  
+}  
