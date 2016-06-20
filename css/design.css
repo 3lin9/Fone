@@ -1,6 +1,6 @@
 *{padding: 0;margin: 0;}
 body{margin: 0 auto;}
-
+/*渐变效果*/
 .bgcolor{
 	width:100%; 
 	height:300px; 
@@ -18,6 +18,10 @@ body{margin: 0 auto;}
      -ms-filter: grayscale(100%);  
       -o-filter: grayscale(100%);  
          filter: grayscale(100%);    /* 标准写法 */  
+}
+.dy{
+	font-size: 30px;
+-webkit-box-reflect: below 0 linear-gradient(transparent, transparent 50%, rgba(255,255,255,.2));
 }
 p{
 	width: 100%;
