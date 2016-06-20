@@ -12,6 +12,19 @@ body{margin: 0 auto;}
 	background: -webkit-linear-gradient(top, #69cbf0, #097ba6);   /*Safari5.1 Chrome 10+*/
 	background: -o-linear-gradient(top, #69cbf0, #097ba6);  /*Opera 11.10+*/
 }
+.bar{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	color: white;
+	line-height: 50px;
+	background-color: #333333;
+	border-radius: 50%;
+	right: 2%;
+	bottom: 5%;
+	box-shadow: 0 0 5px 5px #CCCCCC;
+}
 .grayscale{
 	-webkit-filter: grayscale(100%);    /* webkit内核支持程度较好 */  
     -moz-filter: grayscale(100%);    /* 其他内核现在并不支持，为了将来兼容性书写 */  
