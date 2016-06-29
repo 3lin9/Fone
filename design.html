@@ -5,9 +5,21 @@
 		<title>各种效果图</title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="css/design.css"/>
+	<style type="text/css">
+		#triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+    border-top-right-radius: 31px;
+ }
+	</style>
 	<body>
+		<div id="triangle-topright">
+			
+		</div>
 		<div class="bar">
-			…
+			...
 		</div>
 		<!--
         	作者：ep_ling@163.com
@@ -66,6 +78,13 @@ Your browser does not support the canvas element.
 			<i></i>
 		</div>
 	</div>
+	
+	
+	<h1>一个角为圆角的状态</h1>
+	<div class="half_cricle">
+		
+	</div>
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 	<script type="text/javascript">
 		window.onload=function(){}//js初始化
@@ -87,5 +106,8 @@ Your browser does not support the canvas element.
 		var img=new Image()
 		img.src="img/close_one.png"
 		cxt.drawImage(img,30,60);
+		if($(document).scrollTop()>=40){
+			
+		}
 	</script>
 </html>

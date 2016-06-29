@@ -94,3 +94,14 @@ p{
 50%{transform:rotate(180deg) scale(.6)}
 100%{transform:rotate(360deg) scale(1)}
 }*/
+
+/*一个角为圆角的状态*/
+.half_cricle{
+	position: relative;
+	width: 0;
+    height: 0;
+    border-width: 100px;
+    border-color: #526ef1 transparent transparent #526ef1;
+    border-style: solid;
+    border-top-left-radius: 50px;
+}
